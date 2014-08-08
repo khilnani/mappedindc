@@ -4,7 +4,7 @@
   "version": "0.1.1",
   "description": "Map of companies in the Washington, DC",
   "scripts": {
-    "start": "cd js.code && r.js -o build.js"
+    "start": "cd js.src && r.js -o build.js"
   },
   "keywords": [
     "map",
