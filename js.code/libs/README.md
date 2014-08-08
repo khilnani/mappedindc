@@ -1,0 +1,1 @@
+- Run `download.sh` to download third-party libs

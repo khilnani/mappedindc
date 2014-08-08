@@ -1,0 +1,43 @@
+<% if (typeof(values)!== 'undefined') { %>
+  <% _.each(values, function (ea) { %>
+    <p>
+      <% if (typeof(ea.updateContent.companyStatusUpdate.share.content)!== 'undefined' &&
+            typeof(ea.updateContent.companyStatusUpdate.share.content.thumbnailUrl)!== 'undefined') { %>
+            
+        <% if (typeof(ea.updateContent.companyStatusUpdate.share.content.shortenedUrl)!== 'undefined') { %>
+        <a href="<%= ea.updateContent.companyStatusUpdate.share.content.shortenedUrl %>" target="_blank"><img src="<%= ea.updateContent.companyStatusUpdate.share.content.thumbnailUrl %>" border="1" class="center-block pull-left pad-right-5"/></a>
+        <% } else { %>
+          <img src="<%= ea.updateContent.companyStatusUpdate.share.content.thumbnailUrl %>" border="" class="center-block pull-left pad-right-5"/>
+        <% } %>
+
+      <% } %>
+      
+      <% if (
+          typeof(ea.updateContent.companyStatusUpdate.share.content)!== 'undefined' &&
+          typeof(ea.updateContent.companyStatusUpdate.share.content.title)!== 'undefined' &&
+          ea.updateContent.companyStatusUpdate.share.content.title.indexOf('.png') == -1 &&
+          ea.updateContent.companyStatusUpdate.share.content.title.indexOf('.jpg') == -1 &&
+          ea.updateContent.companyStatusUpdate.share.content.title.indexOf('.jpeg') == -1 &&
+          ea.updateContent.companyStatusUpdate.share.content.title.indexOf('.gif') == -1
+        ) { %>
+        <h5>
+        <% if (typeof(ea.updateContent.companyStatusUpdate.share.content.shortenedUrl)!== 'undefined') { %>
+        <a href="<%= ea.updateContent.companyStatusUpdate.share.content.shortenedUrl %>" target="_blank"><%= ea.updateContent.companyStatusUpdate.share.content.title %></a>
+        <% } else { %>
+          <span class="pull-right"><%= ea.updateContent.companyStatusUpdate.share.content.title %></span>
+        <% } %>
+        </h5>
+      <% } %>
+    </p>
+    <p>
+      <%= ea.updateContent.companyStatusUpdate.share.comment %>
+    </p>  
+    
+    <hr/>
+    
+  <% }) %>
+<% } else { %>
+  No updates posted.
+<% } %>
+
+

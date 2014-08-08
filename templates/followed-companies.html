@@ -1,0 +1,11 @@
+<div class="followed-companies">
+
+<h4>Saved Companies</h4>
+
+<ul>
+<% $.each(values, function (key, val) { %>
+ <li><a href="#" class="followed-company" data-l-id="<%= key %>"><%= val %></a></li>
+<% }) %>
+</ul>
+
+</div>

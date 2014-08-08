@@ -1,0 +1,58 @@
+
+<h3>
+<button type="button" class="btn btn-default btn-xs" id="companyFollowBtn">
+  <% if(doesFollow) { %>
+    <span class="glyphicon glyphicon-star" id="companyFollowStatus"></span>
+  <% } else { %>
+    <span class="glyphicon glyphicon-star-empty" id="companyFollowStatus"></span>
+  <% } %>
+</button>
+<%= name %>
+</h3>
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#overview_panel" data-toggle="tab">Info</a></li>
+  <li><a href="#news_panel" data-toggle="tab">News</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content bg-default">
+  <div class="tab-pane fade in active" id="overview_panel">
+  	<p class="small well">
+  	<% if (typeof(websiteUrl)!== 'undefined') { %>
+  	  Website: <a href="<%= websiteUrl %>" target="_blank"><%= websiteUrl %></a><br/>
+  	<% } %>
+  	<% if (typeof(blogRssUrl)!== 'undefined') { %>
+  	  Blog: <a href="<%= blogRssUrl %>" target="_blank"><%= blogRssUrl %></a><br/>
+  	<% } %>
+  	<% if (typeof(twitterId)!== 'undefined' && twitterId != "") { %>
+  	  Twitter: <a href="http://twitter.com/<%= twitterId %>" target="_blank">@<%= twitterId %></a><br/>
+  	<% } %>
+  	<% if (typeof(employeeCountRange)!== 'undefined') { %>
+  	  Size: <%= employeeCountRange.name %><br/>
+  	<% } %>
+  	<% if (typeof(industry)!== 'undefined') { %>
+  	  Industry: <%= industry %><br/>
+  	<% } %>
+  	<% if (typeof(foundedYear)!== 'undefined' || typeof(endYear)!== 'undefined') { %>
+  	Active:
+  	  <% if (typeof(foundedYear)!== 'undefined') { %>
+  	    <%= foundedYear %>
+  	  <% } %>
+  	  <% if (typeof(endYear)!== 'undefined') { %>
+  	    - <%= endYear %>
+  	   <% } %>  	
+  	<br/>
+  	<% } %>
+  	Followers: <%= numFollowers %><br/>
+  	</p>
+  	<p>
+  	<% if (typeof(description)!== 'undefined') { %><%= description %><% } %>
+  	  
+  	</p>
+  </div>
+  <div class="tab-pane fade" id="news_panel">
+  	<p>Loading...</p>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+    color: #333;
+}
+div#container {
+    height:100%;
+    width:100%;
+    min-height:100%;
+    margin:0 auto;
+    min-height:100%;
+    overflow:hidden;
+    position:relative;
+}
+div#header {
+    height:50px;
+    position:relative;
+}
+div#left_col {
+    left:0;
+    bottom:0;
+    top:0;
+    overflow:hidden;
+    padding-bottom:0px;
+    margin-top:55px;
+    position:absolute;
+    width:300px;
+}
+div#right_col {
+    right:0;
+    bottom:0;
+    top:0;
+    left: 300px;
+    overflow:hidden;
+    padding-bottom:0px;
+    margin-top:55px;
+    position:absolute;
+    background:#EEE;
+    border:1px solid #ccc;
+}
+.page_panel {
+    height:100%;
+    margin: 0;
+    border: 0;
+}
+#info_panel {
+    margin: 10px;
+    color: #CCC;
+}
+#accordian {
+    height: 100%;
+}
+#login-instr {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+#login-instr-well {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 75%;
+}
+.tab-content {
+    padding: 10px 10px 260px 10px;
+    overflow:auto;
+    height:100%;
+}
+.followed-companies {
+    padding: 0 10px 100px 10px;
+    overflow:auto;
+    height:100%;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 400px;
+    overflow-x: hidden;
+}
+
+.pad-right-5 {
+    margin-right: 10px;   
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+hr {
+    border-top: 1px solid #444444;
+}
+
+a img:hover {
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc; 
+}
+
+a {
+  color: #f89406;
+}
+
+a:hover {
+  color: #fdb01f;
+}
+
+@media screen and (max-width: 768px) {
+}

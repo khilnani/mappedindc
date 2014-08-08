@@ -1,0 +1,23 @@
+{
+  "name": "mappedindc",
+  "private": true,
+  "version": "0.1.1",
+  "description": "Map of companies in the Washington, DC",
+  "scripts": {
+    "start": "cd js.code && r.js -o build.js"
+  },
+  "keywords": [
+    "map",
+    "companies",
+    "linkedin",
+    "api",
+    "washington",
+    "dc",
+    "startups",
+    "list"
+  ],
+  "author": "Nik Khilnani <nik@khilnani.org> (http://khilnani.org/)",
+  "bugs": {
+    "url": "https://github.com/basebean/mappedindc/issues"
+  }
+}
