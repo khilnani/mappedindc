@@ -2,7 +2,7 @@ mappedindc
 ============
 
 > Interactive map of Companies in the DC area, based on the LinkedIn API platform.
-> Source code for http://mappedindc.com
+> Source code for http://mappedindc.com - no longer live.
 
 ### Instructions
 
